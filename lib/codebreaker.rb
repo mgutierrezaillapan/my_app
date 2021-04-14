@@ -1,14 +1,15 @@
 class Codebreaker
     def initialize(numeroGanador)
-        self.numGanador = numeroGanador
+        @numGanador = numeroGanador
     end
-    attr_accessor :numGanador
     def arriesgar(numero)
         mensaje = ""
-        if(self.numGanador == numero)
-            mensaje= "Número correcto, Ganaste!"            
-        elsif
-            mensaje = "!" 
+        if(@numGanador == numero)
+            mensaje= "Número correcto, Ganaste!"
+        elsif (@numGanador.to_s[0] == numero.to_s[0])
+            mensaje ="#---"
+        else
+            mensaje = "----" 
         end
 
         return mensaje

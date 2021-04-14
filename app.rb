@@ -7,7 +7,7 @@ get '/' do
 end
 
 post '/' do
-    codebreaker = Codebreaker.new 8
-    @mensaje = codebreaker.arriesgar 8
+    codebreaker = Codebreaker.new 1234
+    @mensaje = codebreaker.arriesgar params[:numero].to_i
     erb :index
 end

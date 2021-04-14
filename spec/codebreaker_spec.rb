@@ -10,6 +10,12 @@ describe Codebreaker do
     it "numero incorrecto" do
         codebreaker = Codebreaker.new 8
         mensaje = codebreaker.arriesgar 7
-        expect(mensaje).to eq "!"
+        expect(mensaje).to eq "----"
+    end
+
+    it "1er dígito correcto" do
+        codebreaker = Codebreaker.new 1234
+        mensaje = codebreaker.arriesgar 1555
+        expect(mensaje).to eq "#---"
     end
 end
