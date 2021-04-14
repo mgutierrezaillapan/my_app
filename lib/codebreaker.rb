@@ -4,14 +4,19 @@ class Codebreaker
     end
     def arriesgar(numero)
         mensaje = ""
+
         if(@numGanador == numero)
-            mensaje= "Número correcto, Ganaste!"
-        elsif (@numGanador.to_s[0] == numero.to_s[0])
-            mensaje ="#---"
+            mensaje =  "Número correcto, Ganaste!"
         else
-            mensaje = "----" 
+            for i in 0..3
+                if(@numGanador[i] == numero[i])
+                    mensaje +="#"
+                else
+                    mensaje +="-"
+                end
+            end
         end
 
-        return mensaje
+        return mensaje        
     end
 end
