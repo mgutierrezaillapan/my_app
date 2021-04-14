@@ -11,7 +11,7 @@ Then muestra mensaje "Número correcto, Ganaste!"
 
 Scenario: Arriesgo un numero y siempre es incorrecto
 Given Inicio la aplicacion
-When arriesga un numero 7
+When arriesga un numero 7555
 Then muestra mensaje "----"
 
 Scenario: 1er dígito correcto
